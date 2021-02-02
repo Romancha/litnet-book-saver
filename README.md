@@ -7,15 +7,17 @@ litnet book saver | litnet сохранение книг
 ***Before any usage please read the [Litnet rules](https://litnet.com/).***
 
 ## Overview
-Simple book saver from Litnet to .html
+Simple book saver from Litnet to html
 
 ## Getting Started
-Google Chrome must be installed
+Java, Google Chrome must be installed
 ### Run
+Download litnet-book-save.jar from [last release](https://github.com/Romancha/litnet-book-saver/releases). <br>
+Кun the command with the specified url to the book
 ```
 java -jar litnet-book-saver.jar -u url_to_book_first_page
 ```
-Result will be saved to a file resultBook.html
+Result will be saved to a file *resultBook.html*
 ### Command options
 |Command short|Command long|Description|
 |---|---|---|
