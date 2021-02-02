@@ -12,12 +12,13 @@ Simple book saver from Litnet to html
 ## Getting Started
 Java, Google Chrome must be installed
 ### Run
-Download litnet-book-save.jar from [last release](https://github.com/Romancha/litnet-book-saver/releases). <br>
-Run the command with the specified url to the book first page
+1. Download litnet-book-save.jar from [last release](https://github.com/Romancha/litnet-book-saver/releases). <br>
+2. Run the command with the specified url to the book first page
 ```
-java -jar litnet-book-saver.jar -u url_to_book_first_page
+java -jar litnet-book-saver-{version}.jar -u url_to_book_first_page
 ```
-Result will be saved to a file *resultBook.html*
+3. Wait for all pages to be saved, and the browser to close
+4. Check result file *resultBook.html*
 ### Command options
 |Command short|Command long|Description|
 |---|---|---|
