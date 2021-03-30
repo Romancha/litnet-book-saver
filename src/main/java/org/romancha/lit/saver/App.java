@@ -24,8 +24,8 @@ public class App {
 
         String file = cmd.getOptionValue(LitOptions.FILE, "./resultBook.html");
         String wait = cmd.getOptionValue(LitOptions.WAIT, "10");
-        String delayMin = cmd.getOptionValue(LitOptions.WAIT, "2");
-        String delayMax = cmd.getOptionValue(LitOptions.WAIT, "10");
+        String delayMin = cmd.getOptionValue(LitOptions.DELAY_MIN, "2");
+        String delayMax = cmd.getOptionValue(LitOptions.DELAY_MAX, "10");
 
         LitParser parser = new LitParser(url, file,
                 Integer.parseInt(wait), Integer.parseInt(delayMin), Integer.parseInt(delayMax)
