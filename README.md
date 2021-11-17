@@ -1,31 +1,38 @@
-litnet.com book saver | litnet.com сохранение книг
-=================
-## Disclaimer
+# litnet-book-saver
 
-:warning: ***For research/educational purposes only, the use of this code is your responsibility. Do not violate copyright!***<br>
-***I'm not responsible for the use of this program.<br>***
-***Before any usage please read the [Litnet rules](https://litnet.com/).***
+<p align="center">
+  <span>Русский</span> |
+  <a href="https://github.com/Romancha/litnet-book-saver/tree/master/lang/english#litnet-book-saver">English</a> |
+</p>
 
-## Overview
-Simple book saver from Litnet to html
+## Отказ от ответственности
 
-## Getting Started
-Java, Google Chrome must be installed
-### Run
-1. Download litnet-book-save.jar from [last release](https://github.com/Romancha/litnet-book-saver/releases). <br>
-2. Run the command with the specified url to the book first page
+:warning: ***Использование только для исследовательских/образовательных целей, вы несете ответственность за использование этого кода. Не нарушайте авторские права!***<br>
+***Я не несу ответственности за использование этой программы.<br>***
+***Перед использованием ознакомьтесь с правилами [Litnet.com](https://litnet.com/).***
+
+## Описание
+Простой парсер litnet.com, позволяющий сохранить книги в html
+
+## Использование
+Java, Google Chrome должны быть установлены
+### Запуск
+1. Скачайте litnet-book-save.jar из [последнего релиза](https://github.com/Romancha/litnet-book-saver/releases) <br>
+2. Запустите в командной строке команду, с указанием url первой страницы книги
 ```
-java -jar litnet-book-saver-{version}.jar -u url_to_book_first_page
+java -jar litnet-book-saver-{версия}.jar -u ссылка_на_первую_страницу_книги
 ```
-3. Wait for all pages to be saved, and the browser to close
-4. Check result file *resultBook.html*
-### Command options
-|Command short|Command long|Description|
+3. Подождите пока пролистаются все страницы и браузер закроется
+4. Книга сохранится в файл *resultBook.html*
+
+Если необходимо сохранить приватную книгу, вы можете через флаг <i>-w</i> указать количество секунд ожидания перед парсингом, в это время залогиньтесь под вашим аккаунтом.
+### Описание параметров
+|Короткий параметр|Полный параметр|Описание|
 |---|---|---|
-|-h|--help|Print help|
-|-u|--url <arg>|Litnet book url. First page|
-|-f|--file <arg>|File name to save. Should be in html format|
-|-w|--wait <arg>| Wait seconds before start parse. On this delay you can login on you Litnet account, for private books|
-|-dn|--delayMin <arg>|Min delay (seconds) before parse next page|
-|-dx|--delayMax <arg>|Max delay (seconds) before parse next page|
+|-h|--help|Вывести справку|
+|-u|--url <arg>|Ссылка на первую страницу книги litnet.com|
+|-f|--file <arg>|Имя файла для сохранения книги. Должно быть с расширением .html|
+|-w|--wait <arg>| Задержка в секундах перед началом парсинга. В это время вы можете войти в свою учетную запись Litnet для приватных книг|
+|-dn|--delayMin <arg>|Минимальная задержка (в секундах) перед парсингом следующей страницы|
+|-dx|--delayMax <arg>|Максимальная задержка (в секундах) перед парсингом следующей страницы|
 
