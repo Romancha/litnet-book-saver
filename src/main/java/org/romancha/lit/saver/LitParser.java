@@ -32,11 +32,22 @@ public class LitParser {
 
         TimeUnit.SECONDS.sleep(waitBeforeStart);
 
+        int pageNumber = 1;
+        String previousPart = "";
+
         while (true) {
             try {
                 String cleanedPart = LitBook.getCleanedDocumentContent();
+                if (previousPart.equals(cleanedPart)) {
+                    continue;
+                }
 
+                previousPart = cleanedPart;
+
+                result.append(getPageNumberHtml(pageNumber));
                 result.append(cleanedPart);
+
+                pageNumber++;
 
                 TimeUnit.SECONDS.sleep(getRandomDelay());
 
@@ -59,6 +70,10 @@ public class LitParser {
         } catch (IOException e) {
             System.out.println("Error while try to save result file: " + e);
         }
+    }
+
+    private String getPageNumberHtml(int page) {
+        return "<h3>Страница: " + page + "</h3>";
     }
 
     private int getRandomDelay() {
