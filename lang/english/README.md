@@ -1,7 +1,7 @@
 # litnet-book-saver
 
 <p align="center">
-  <a href="https://github.com/Romancha/litnet-book-saver/tree/master/#litnet-book-saver">Русский</a> |
+  <a href="https://github.com/Romancha/litnet-book-saver/tree/master/#litnet-book-saver">Русский</a>
   <span>English</span> |
 </p>
 

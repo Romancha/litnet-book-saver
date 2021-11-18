@@ -2,7 +2,7 @@
 
 <p align="center">
   <span>Русский</span> |
-  <a href="https://github.com/Romancha/litnet-book-saver/tree/master/lang/english#litnet-book-saver">English</a> |
+  <a href="https://github.com/Romancha/litnet-book-saver/tree/master/lang/english#litnet-book-saver">English</a>
 </p>
 
 ## Отказ от ответственности
