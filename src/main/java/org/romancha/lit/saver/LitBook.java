@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class LitBook {
 
     private static final List<String> CLASSES_TO_REMOVE = Arrays.asList("reader-pagination", "clearfix", "popup-modal",
-            "block b-recommended widget-block");
+            "block b-recommended widget-block", "star-info");
 
     public static SelenideElement getReaderText() {
         return $(By.xpath("//div[contains(@class, 'reader-text font-size-medium')]")).should(Condition.exist);
@@ -40,9 +40,8 @@ public class LitBook {
     public static String getCleanedDocumentContent() {
         Document doc = Jsoup.parse(LitBook.getReaderText().innerHtml());
 
-        CLASSES_TO_REMOVE.forEach(doc::getElementsByClass);
+        CLASSES_TO_REMOVE.forEach(classToRemove -> doc.getElementsByClass(classToRemove).remove());
         doc.getElementsByTag("script").remove();
-        doc.getElementsByTag("div").remove();
         doc.getElementsByAttributeValueContaining("style", "-14px").remove();
 
         return doc.toString();
